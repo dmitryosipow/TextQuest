@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef69b6cb12bf42143beeaa3b81d42366, type: 3}
+  m_Name: Inside forest
+  m_EditorClassIdentifier: 
+  content: Inside the forest you've been attacked by pack of wild dogs. Do you want
+    to go fight them (Num1) or climb on a tree and wait (Num2)?
+  locate: In the park
+  background: {fileID: 0}
+  deltaHealth: 0
+  startStep: 0
+  nextSteps1: {fileID: 11400000, guid: c592ff46c7d9d89428c6b25841d38540, type: 2}
+  nextSteps2: {fileID: 11400000, guid: dac6ee3d349008f43bc4d17fe8275bf2, type: 2}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef69b6cb12bf42143beeaa3b81d42366, type: 3}
+  m_Name: Startstep
+  m_EditorClassIdentifier: 
+  content: You arrive in ruined postapocaleptic city. You have to find shelter. You
+    could try to search it the center (press Num1) or on the outskirts (press Num2)
+  locate: Ruined city district
+  background: {fileID: 21300000, guid: a0aa52896ecfeb54dbe9a53c785e0cbd, type: 3}
+  deltaHealth: 0
+  startStep: 1
+  nextSteps1: {fileID: 0}
+  nextSteps2: {fileID: 11400000, guid: 62382940681c19d4a921b40ceb481f48, type: 2}

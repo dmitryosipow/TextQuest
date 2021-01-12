@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef69b6cb12bf42143beeaa3b81d42366, type: 3}
+  m_Name: Fight dogs
+  m_EditorClassIdentifier: 
+  content: You manage to fight back the dogs using a stick, but got some wounds. Finally
+    you came out of the park. In the far you see a big building with glowing windows.
+    You go forward to it (Num1)
+  locate: In the park
+  background: {fileID: 0}
+  deltaHealth: -30
+  startStep: 0
+  nextSteps1: {fileID: 11400000, guid: 3e49b1c44247d8348af9e6fed17668b8, type: 2}
+  nextSteps2: {fileID: 0}
