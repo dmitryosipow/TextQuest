@@ -9,7 +9,10 @@ public class Steps : MonoBehaviour
     public string content;
     public string locate;
 
-    public Sprite background; 
+    public Sprite background;
+
+    public int deltaHealth = 0;
+    public bool startStep = false;
 
     public Steps nextSteps1;
     public Steps nextSteps2;

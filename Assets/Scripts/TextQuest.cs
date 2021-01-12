@@ -12,6 +12,7 @@ public class TextQuest : MonoBehaviour
     public Image picture;
 
     public Steps currentStep;
+    public PlayerControl player;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +33,21 @@ public class TextQuest : MonoBehaviour
         }
     }
 
+    private void Reset()
+    {
+        player.Reset();
+    }
+
     void UpdateStep(Steps step)
     {
         currentStep = step;
         content.text = step.content;
         picture.sprite = step.background;
         location.text = step.locate;
+        player.UpdateHealth(step.deltaHealth);
+        if(step.startStep)
+        {
+            Reset();
+        }
     }
 }

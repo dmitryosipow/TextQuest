@@ -167,6 +167,8 @@ MonoBehaviour:
     You choice is to fight (Num1) , to run away (Num2)
   locate: Ruined district
   background: {fileID: 21300000, guid: 707fb2f27accb964699add8ba995192b, type: 3}
+  deltaHealth: 0
+  startStep: 0
   nextSteps1: {fileID: 670204829}
   nextSteps2: {fileID: 1597966822}
 --- !u!1 &215088993
@@ -216,6 +218,8 @@ MonoBehaviour:
     You find out that you try to find in the Atlant (Num1) or Kommunarka (Num2) factory.
   locate: Trading district
   background: {fileID: 0}
+  deltaHealth: 0
+  startStep: 0
   nextSteps1: {fileID: 670204829}
   nextSteps2: {fileID: 1597966822}
 --- !u!1 &224992415
@@ -342,6 +346,8 @@ MonoBehaviour:
     In the far you see a big building with glowing windows. You go forward to it (Num1)
   locate: Ruined building with supplies
   background: {fileID: 0}
+  deltaHealth: 20
+  startStep: 0
   nextSteps1: {fileID: 952117562}
   nextSteps2: {fileID: 0}
 --- !u!1 &291893637
@@ -393,6 +399,8 @@ MonoBehaviour:
     building with glowing windows. You go forward to it (Num1)
   locate: In the park
   background: {fileID: 0}
+  deltaHealth: -10
+  startStep: 0
   nextSteps1: {fileID: 952117562}
   nextSteps2: {fileID: 0}
 --- !u!1 &362871306
@@ -443,6 +451,8 @@ MonoBehaviour:
     ruins (Num2).
   locate: Blockpost
   background: {fileID: 21300000, guid: 5228b75651cd01f48bb9ca027845540a, type: 3}
+  deltaHealth: 0
+  startStep: 0
   nextSteps1: {fileID: 215088995}
   nextSteps2: {fileID: 215088995}
 --- !u!1 &519420028
@@ -576,6 +586,8 @@ MonoBehaviour:
     people (Num1).
   locate: Near the Atlant factory
   background: {fileID: 0}
+  deltaHealth: 0
+  startStep: 0
   nextSteps1: {fileID: 1351467253}
   nextSteps2: {fileID: 0}
 --- !u!1 &670204827
@@ -625,6 +637,8 @@ MonoBehaviour:
     to works for local gangs.\nYour journey is over. \nPress a key to start game again."
   locate: Working station
   background: {fileID: 0}
+  deltaHealth: -100
+  startStep: 0
   nextSteps1: {fileID: 670695315}
   nextSteps2: {fileID: 670695315}
 --- !u!1 &670695313
@@ -674,6 +688,8 @@ MonoBehaviour:
     could try to search it the center (press Num1) or on the outskirts (press Num2)
   locate: Ruined city district
   background: {fileID: 21300000, guid: a0aa52896ecfeb54dbe9a53c785e0cbd, type: 3}
+  deltaHealth: 0
+  startStep: 1
   nextSteps1: {fileID: 362871308}
   nextSteps2: {fileID: 210915145}
 --- !u!1 &721258178
@@ -780,6 +796,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1639289200}
   - {fileID: 785884644}
   - {fileID: 1724819071}
   m_Father: {fileID: 721258179}
@@ -856,7 +873,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 771387910}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -903,6 +920,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785884643}
   m_CullTransparentMesh: 0
+--- !u!1 &809752618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809752620}
+  - component: {fileID: 809752619}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &809752619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809752618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86829495bf80cf348a669b432590250f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  avatar: {fileID: 1639289198}
+  veryLow: {fileID: 21300000, guid: 7fd651f50c7422245ba96b1e10c93a4d, type: 3}
+  low: {fileID: 21300000, guid: 42c46b8130447b04e90474acaea56dc9, type: 3}
+  high: {fileID: 21300000, guid: 2711260b28c25d949981f162c188d4f6, type: 3}
+--- !u!4 &809752620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809752618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 900.75867, y: 409.16217, z: -429.72714}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &906197310
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +1015,8 @@ MonoBehaviour:
     clean the horses. Do you agree (Num1) or continue going by foot (Num2).
   locate: Meet caravan
   background: {fileID: 0}
+  deltaHealth: 0
+  startStep: 0
   nextSteps1: {fileID: 669422266}
   nextSteps2: {fileID: 1805444735}
 --- !u!1 &952117561
@@ -985,6 +1052,8 @@ MonoBehaviour:
     rest here. \nMove 1 or 2 to start again."
   locate: Kommunarka
   background: {fileID: 0}
+  deltaHealth: 0
+  startStep: 0
   nextSteps1: {fileID: 670695315}
   nextSteps2: {fileID: 670695315}
 --- !u!4 &952117563
@@ -1049,6 +1118,8 @@ MonoBehaviour:
     You go forward to it (Num1)
   locate: In the park
   background: {fileID: 0}
+  deltaHealth: -30
+  startStep: 0
   nextSteps1: {fileID: 952117562}
   nextSteps2: {fileID: 0}
 --- !u!1 &1351467252
@@ -1084,6 +1155,8 @@ MonoBehaviour:
     \nMove 1 or 2 to start again."
   locate: Atlant factory
   background: {fileID: 0}
+  deltaHealth: 0
+  startStep: 0
   nextSteps1: {fileID: 670695315}
   nextSteps2: {fileID: 670695315}
 --- !u!4 &1351467254
@@ -1147,6 +1220,8 @@ MonoBehaviour:
     to go fight them (Num1) or climb on a tree and wait (Num2)?
   locate: In the park
   background: {fileID: 0}
+  deltaHealth: 0
+  startStep: 0
   nextSteps1: {fileID: 1316287123}
   nextSteps2: {fileID: 291893639}
 --- !u!1 &1479104136
@@ -1295,6 +1370,8 @@ MonoBehaviour:
     around through the ruined blocks (Num2)?
   locate: Close to park
   background: {fileID: 0}
+  deltaHealth: 0
+  startStep: 0
   nextSteps1: {fileID: 1393970170}
   nextSteps2: {fileID: 241342990}
 --- !u!1 &1637527524
@@ -1342,6 +1419,79 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1639289197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1639289200}
+  - component: {fileID: 1639289199}
+  - component: {fileID: 1639289198}
+  m_Layer: 5
+  m_Name: Avatar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1639289198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639289197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1639289199
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639289197}
+  m_CullTransparentMesh: 0
+--- !u!224 &1639289200
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639289197}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 771387910}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000011444, y: 313}
+  m_SizeDelta: {x: 139.4, y: 123.3}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1676406369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,7 +1596,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 771387910}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1541,6 +1691,8 @@ MonoBehaviour:
     you finally can get inside. You see big entrance with a lot of moving people (Num1).
   locate: Near the Atlant factory
   background: {fileID: 0}
+  deltaHealth: 0
+  startStep: 0
   nextSteps1: {fileID: 1351467253}
   nextSteps2: {fileID: 0}
 --- !u!1 &1965662847
@@ -1577,6 +1729,7 @@ MonoBehaviour:
   location: {fileID: 1724819072}
   picture: {fileID: 721258180}
   currentStep: {fileID: 670695315}
+  player: {fileID: 809752619}
 --- !u!4 &1965662849
 Transform:
   m_ObjectHideFlags: 0
